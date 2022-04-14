@@ -13,7 +13,7 @@ function signUp() {
     
     pushUserData(newUser);
 
-    alert("Felicidades, has sido registrado. Ahora debes iniciar sesion con tu cuenta")
+    alert("Felicidades, has sido registrado. Ahora debes iniciar sesion en el DOM con tu cuenta")
     login();
 
     //Recorriendo y mostrando objeto NewUser y array de objetos users_data en consola.

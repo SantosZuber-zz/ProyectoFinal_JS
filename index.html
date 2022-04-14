@@ -11,9 +11,9 @@
 
 <body>
     <img src="assets/img/background-image.jpg" alt="hombre pescando" class="background-img">
-    <div class="form__container">
+    <div class="form__container" id="form_container">
         <h1>Login</h1>
-        <form class="form" action="">
+        <form class="form" id="form" action="">
             <div class="name form__block">
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username">
@@ -22,7 +22,9 @@
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password">
             </div>
+            <button id="button">Submit</button>
         </form>
+        <button id="registrarse">Registrarse</button>
     </div>
 
 
@@ -32,6 +34,7 @@
     <script src="js/UserData.js"></script>
     <script src="js/SignUp.js"></script>
     <script src="js/Login.js"></script>
+    <script>app()</script>
 </body>
 
 </html>

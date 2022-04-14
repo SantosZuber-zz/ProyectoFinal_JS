@@ -1,17 +1,24 @@
-function login(){
-    alert("Iniciar sesion");
-    login_username = prompt("Ingrese su nombre de usuario:");
-    login_password = prompt("Ingrese su contrasena:");
+function login() {
+    const form = document.getElementById("form_container");
 
-    //Validacion
-    const validateName = users_data.some((user) => user.name == login_username);
-    const validatePassword = users_data.some((user) => user.pass == login_password);
-    if(validateName && validatePassword){
-        alert("Felicidades "+login_username+" has iniciado sesion exitosamente!")
+    document.getElementById("button").onclick = function () {
+        login_username = document.getElementById("username").value;
+        login_password = document.getElementById("password").value;
+
+        //Validacion
+        const validateName = users_data.some((user) => user.name == login_username);
+        const validatePassword = users_data.some((user) => user.pass == login_password);
+
+        if (validateName && validatePassword) {
+            alert("Felicidades " + login_username + " has iniciado sesion exitosamente!")
+            form.classList.add("displayNone");
+        }
+        else {
+            alert("Usuario o contrasena incorrectos")
+        }
+
+        return false;
     }
-    else{
-        alert("Usuario o contrasena incorrectos")
-        alert("Volviendo a ejecutar el programa");
-        app();
-    }
-}
+
+
+} 
