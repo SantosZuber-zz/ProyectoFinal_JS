@@ -5,7 +5,6 @@ function app() {
     let login_password;
     let newUser;
 
-
     document.getElementById("registrarse").onclick = function () {
         alert("Bienvenido al simulador de Login!");
         alert("[Nos encontramos en desarrollo]\n Por ahora deberas registrarte por prompt y luego podras iniciar sesion por el formulario");
@@ -14,6 +13,6 @@ function app() {
         return false;
     }
 
-        
+
 
 }

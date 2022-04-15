@@ -10,7 +10,7 @@ function signUp() {
     }
 
     newUser = new User(register_Username, register_Password);
-    
+
     pushUserData(newUser);
 
     alert("Felicidades, has sido registrado. Ahora debes iniciar sesion en el DOM con tu cuenta")

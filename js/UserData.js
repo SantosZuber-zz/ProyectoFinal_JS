@@ -6,7 +6,7 @@ class User {
 
 }
 
-function pushUserData(user){
+function pushUserData(user) {
     users_data.push(user);
 }
 
