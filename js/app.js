@@ -7,10 +7,11 @@ function app() {
     let newUser;
     document.querySelector(".login").style.display = "none";
     signUp();
+    login();
+
 
     document.getElementById("login").onclick = function () {
         registerToLogin();
-        login();
     }
 
     document.getElementById("registrarse").onclick = function () {
@@ -28,5 +29,24 @@ function app() {
         document.querySelector(".login").style.display = "none";
         document.querySelector(".register").style.display = "flex";
     }
+
+
+    //DarkMode
+
+    let oscuro = localStorage.getItem("darkmode");
+
+    document.getElementById("darkmode").onclick = function () {
+        if (oscuro == 'null') {
+            localStorage.setItem("darkmode", true);
+            document.body.style.backgroundColor = "#062C30"
+        } else if (oscuro == 'true') {
+            localStorage.setItem("darkmode", false);
+            document.body.style.backgroundColor = "#F5F5F5"
+        } else if (oscuro == "false") {
+            localStorage.setItem("darkmode", true);
+            document.body.style.backgroundColor = "#062C30"
+        }
+        oscuro = localStorage.getItem("darkmode");
+    };
 
 }

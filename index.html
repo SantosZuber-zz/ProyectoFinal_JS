@@ -11,16 +11,26 @@
 
 <body>
 
+    <button id="darkmode">
+        <span class="button_top"> DarkMode
+        </span>
+    </button>
+
+
+
+
     <div class="login caja">
         <div class="bar">
             <button class="menuBtn" id="registrarse">Registrarse</button>
         </div>
         <h3>Login</h3>
         <form>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+            <input type="text" placeholder="Username" id="usernameL">
+            <input type="password" placeholder="Password" id="passwordL">
 
-            <p id="warning"></p>
+            <p id="warningL" class="warning"></p>
+            <p class="warningGreen" id="warningGL"></p>
+
 
             <button class="submit" id="login_submit">Submit</button>
         </form>
@@ -33,13 +43,14 @@
         </div>
         <h3>Register</h3>
         <form>
-            <input type="text" placeholder="Username" id="username">
-            <input type="password" placeholder="Password" id="password">
-            <input type="password" placeholder="Confirm your password" id="confirm_password">
+            <input type="text" placeholder="Username" id="usernameR">
+            <input type="password" placeholder="Password" id="passwordR">
+            <input type="password" placeholder="Confirm your password" id="confirm_passwordR">
 
-            <p id="warning"></p>
+            <p class="warning" id="warningR"></p>
+            <p class="warningGreen" id="warningGR"></p>
 
-            <button class="submit" id="login_submit">Submit</button>
+            <button class="submit" id="register_submit">Submit</button>
         </form>
     </div>
 
