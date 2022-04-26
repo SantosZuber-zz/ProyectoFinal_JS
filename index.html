@@ -10,26 +10,37 @@
 </head>
 
 <body>
-    <img src="assets/img/background-image.jpg" alt="hombre pescando" class="background-img">
-    <div class="form__container" id="form_container">
-        <h1>Login</h1>
-        <form class="form" id="form" action="">
-            <div class="name form__block">
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username">
-            </div>
-            <div class="password form__block">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password">
-            </div>
-            <button id="button">Submit</button>
+
+    <div class="login caja">
+        <div class="bar">
+            <button class="menuBtn" id="registrarse">Registrarse</button>
+        </div>
+        <h3>Login</h3>
+        <form>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+
+            <p id="warning"></p>
+
+            <button class="submit" id="login_submit">Submit</button>
         </form>
-        <button id="registrarse">Registrarse</button>
-        <p class="warning">Antes de iniciar sesion debes registrarte</p>
     </div>
 
-    <div class="Bienvenida__container">
-        <h2 id="Bienvenida__Title"></h2>
+
+    <div class="register caja">
+        <div class="bar">
+            <button class="menuBtn" id="login">Login</button>
+        </div>
+        <h3>Register</h3>
+        <form>
+            <input type="text" placeholder="Username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <input type="password" placeholder="Confirm your password" id="confirm_password">
+
+            <p id="warning"></p>
+
+            <button class="submit" id="login_submit">Submit</button>
+        </form>
     </div>
 
 
