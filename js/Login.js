@@ -1,4 +1,6 @@
 function login() {
+    let login_username;
+    let login_password;
 
     document.getElementById("login_submit").onclick = function () {
         login_username = document.getElementById("usernameL").value;

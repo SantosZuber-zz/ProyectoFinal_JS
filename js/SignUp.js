@@ -1,5 +1,8 @@
 function signUp() {
-
+    let register_Username;
+    let register_Password;
+    let confirm_Register_Password;
+    let newUser;
     document.getElementById("register_submit").onclick = function () {
         register_Username = document.getElementById("usernameR").value;
         register_Password = document.getElementById("passwordR").value;
@@ -10,7 +13,7 @@ function signUp() {
                 newUser = new User(register_Username, register_Password);
                 pushUserData(newUser);
                 document.getElementById("warningGR").innerHTML = "Felicidades! Cuenta creada";
-                
+
                 //Recorriendo y mostrando objeto NewUser y array de objetos users_data en consola.
                 console.log("El nuevo usuario creado es:");
                 for (let prop in newUser) {
