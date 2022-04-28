@@ -7,12 +7,7 @@ function login() {
         const validateName = users_data.some((user) => user.name == login_username);
         const validatePassword = users_data.some((user) => user.pass == login_password);
 
-        if (validateName && validatePassword) {
-            document.getElementById("warningGL").innerHTML = "Felicidades " + login_username + "! has iniciado sesion exitosamente";
-        }
-        else {
-            document.getElementById("warningL").innerHTML = "Usuario o contrasenas no existen";
-        }
+        (validateName && validatePassword) ? document.getElementById("warningGL").innerHTML = "Felicidades " + login_username + "! has iniciado sesion exitosamente" : document.getElementById("warningL").innerHTML = "Usuario o contrasenas no existen";
 
         return false;
     }
