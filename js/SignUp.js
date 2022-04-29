@@ -21,6 +21,12 @@ function signUp() {
                 }
                 console.log("La base de datos de los usuarios registrados es: ");
                 users_data.forEach((bloque) => console.log(bloque));
+                Swal.fire({
+                    title: 'Exito!',
+                    text: `${register_Username} has sido registrado con exito! Ahora puedes iniciar sesion`,
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                });
             } else {
                 document.getElementById("warningR").innerHTML = "Su usuario y contrasena deben tener al menos 1 caracter";
             }
