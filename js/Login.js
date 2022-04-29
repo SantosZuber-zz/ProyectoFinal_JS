@@ -1,4 +1,6 @@
 function login() {
+    let login_username;
+    let login_password;
 
     document.getElementById("login_submit").onclick = function () {
         login_username = document.getElementById("usernameL").value;
@@ -8,7 +10,12 @@ function login() {
         const validatePassword = users_data.some((user) => user.pass == login_password);
 
         (validateName && validatePassword) ? document.getElementById("warningGL").innerHTML = "Felicidades " + login_username + "! has iniciado sesion exitosamente" : document.getElementById("warningL").innerHTML = "Usuario o contrasenas no existen";
-
+        Swal.fire({
+            title: 'Exito!',
+            text: `${login_username} has iniciado sesion con exito!`,
+            icon: 'success',
+            confirmButtonText: 'Ok'
+        });
         return false;
     }
 } 
