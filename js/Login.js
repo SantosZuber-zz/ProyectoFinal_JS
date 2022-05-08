@@ -9,13 +9,25 @@ function login() {
         const validateName = users_data.some((user) => user.name == login_username);
         const validatePassword = users_data.some((user) => user.pass == login_password);
 
-        (validateName && validatePassword) ? document.getElementById("warningGL").innerHTML = "Felicidades " + login_username + "! has iniciado sesion exitosamente" : document.getElementById("warningL").innerHTML = "Usuario o contrasenas no existen";
+        (validateName && validatePassword) ? exitopopup() : noUserFound();
+
+        return false;
+    }
+    function exitopopup() {
+        document.getElementById("warningGL").innerHTML = "";
+        document.getElementById("warningGL").innerHTML = "Felicidades " + login_username + "! has iniciado sesion exitosamente"
         Swal.fire({
             title: 'Exito!',
             text: `${login_username} has iniciado sesion con exito!`,
             icon: 'success',
             confirmButtonText: 'Ok'
         });
-        return false;
+    }
+
+    function noUserFound() {
+        document.getElementById("warningL").innerHTML = "Usuario o contrasenas no existen";
+        setTimeout(() => {
+            document.getElementById("warningL").innerHTML = "";
+        }, 4000);
     }
 } 
