@@ -1,5 +1,6 @@
 function app() {
-    document.querySelector(".login").style.display = "none";
+    rickandmorty();
+    /*document.querySelector(".login").style.display = "none";
     signUp();
     login();
 
@@ -11,7 +12,6 @@ function app() {
     document.getElementById("registrarse").onclick = function () {
         loginToRegister();
     }
-
 
 
 
@@ -42,5 +42,5 @@ function app() {
         }
         oscuro = localStorage.getItem("darkmode");
     };
-
+*/
 }

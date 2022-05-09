@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
@@ -16,10 +17,7 @@
         <span class="button_top"> DarkMode
         </span>
     </button>
-
-
-
-
+    <!--
     <div class="login caja">
         <div class="bar">
             <button class="menuBtn" id="registrarse">Registrarse</button>
@@ -54,6 +52,17 @@
             <button class="submit" id="register_submit">Submit</button>
         </form>
     </div>
+-->
+    <div class="rickandmorty__app--container">
+        <header>
+            <h1>Rick and Morty</h1>
+            <form id="form">
+                <input type="text" id="search" class="search" placeholder="Search for a character">
+            </form>
+        </header>
+        <main id="main" class="main">
+        </main>
+    </div>
 
 
 
@@ -62,6 +71,7 @@
     <script src="js/UserData.js"></script>
     <script src="js/SignUp.js"></script>
     <script src="js/Login.js"></script>
+    <script src="js/rickandmorty.js"></script>
     <script>app()</script>
 </body>
 
