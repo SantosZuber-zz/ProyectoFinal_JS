@@ -22,8 +22,9 @@ function login() {
             icon: 'success',
             confirmButtonText: 'Ok'
         });
+        rickandmorty(login_username);
+        return false;
     }
-
     function noUserFound() {
         document.getElementById("warningL").innerHTML = "Usuario o contrasenas no existen";
         setTimeout(() => {

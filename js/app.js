@@ -1,5 +1,6 @@
 function app() {
     document.querySelector(".login").style.display = "none";
+    document.querySelector(".rickandmorty__app--container").style.display = "none";
     signUp();
     login();
 
@@ -11,7 +12,6 @@ function app() {
     document.getElementById("registrarse").onclick = function () {
         loginToRegister();
     }
-
 
 
 
@@ -30,7 +30,7 @@ function app() {
     let oscuro = localStorage.getItem("darkmode");
 
     document.getElementById("darkmode").onclick = function () {
-        if (oscuro == 'null') {
+        if (oscuro == null) {
             localStorage.setItem("darkmode", true);
             document.body.style.backgroundColor = "#062C30"
         } else if (oscuro == 'true') {
