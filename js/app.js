@@ -1,6 +1,6 @@
 function app() {
-    rickandmorty();
-    /*document.querySelector(".login").style.display = "none";
+    document.querySelector(".login").style.display = "none";
+    document.querySelector(".rickandmorty__app--container").style.display = "none";
     signUp();
     login();
 
@@ -30,7 +30,7 @@ function app() {
     let oscuro = localStorage.getItem("darkmode");
 
     document.getElementById("darkmode").onclick = function () {
-        if (oscuro == 'null') {
+        if (oscuro == null) {
             localStorage.setItem("darkmode", true);
             document.body.style.backgroundColor = "#062C30"
         } else if (oscuro == 'true') {
@@ -42,5 +42,5 @@ function app() {
         }
         oscuro = localStorage.getItem("darkmode");
     };
-*/
+
 }

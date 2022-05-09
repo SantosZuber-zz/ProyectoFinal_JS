@@ -7,7 +7,15 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 
-function rickandmorty() {
+function rickandmorty(username) {
+
+
+    document.querySelector(".login").style.display = "none";
+    document.querySelector(".register").style.display = "none";
+    document.querySelector(".rickandmorty__app--container").style.display = "block";
+
+    document.getElementById("username_display").innerHTML = `Bienvenido <p>${username}</p>!`;
+
 
     getCharacters(API_URL);
 
@@ -25,18 +33,26 @@ function rickandmorty() {
             const characterEl = document.createElement('div');
             characterEl.classList.add('character');
             if (status.toLowerCase() == "alive") {
-                characterEl.innerHTML = `<img src="${image}"
-            alt="${name}" class="character-img">
+                characterEl.innerHTML = `<img src = "${image}"
+    alt="${name}" class="character-img" >
         <div id="character-info" class="character-info">
             <h3>${name}</h3>
             <span class="alive">${status}</span>
         </div>`
-            } else {
+            } else if (status.toLowerCase() == "dead") {
                 characterEl.innerHTML = `<img src="${image}"
-            alt="${name}" class="character-img">
+    alt="${name}" class="character-img">
         <div id="character-info" class="character-info">
             <h3>${name}</h3>
-            <span class="deadorunknown">${status}</span>
+            <span class="dead">${status}</span>
+        </div>`
+            }
+            else {
+                characterEl.innerHTML = `<img src="${image}"
+    alt="${name}" class="character-img" >
+        <div id="character-info" class="character-info">
+            <h3>${name}</h3>
+            <span class="unknown">${status}</span>
         </div>`
             }
 

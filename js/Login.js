@@ -16,6 +16,7 @@ function login() {
             icon: 'success',
             confirmButtonText: 'Ok'
         });
+        rickandmorty(login_username);
         return false;
     }
 } 
